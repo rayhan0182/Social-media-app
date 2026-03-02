@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618579657567",
+    "project_id": "social-media-app-a9a51",
+    "storage_bucket": "social-media-app-a9a51.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618579657567:android:7e6a876eaed08b8c702cea",
+        "android_client_info": {
+          "package_name": "com.example.zyntra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwlPlPbnAGGJBGn5mlj_FDfkPiCHJJCqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
