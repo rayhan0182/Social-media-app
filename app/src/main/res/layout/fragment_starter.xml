@@ -1,50 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#ffffff"
+    android:padding="@dimen/_5sdp"
     tools:context=".starter.StarterFragment">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
+        android:fontFamily="@font/arizonia"
         android:text="Zyntra"
-        android:textSize="@dimen/_14ssp"
         android:textColor="#0B2F4D"
-        />
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_100sdp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login"
+    <EditText
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="L O G I N"
+        android:fontFamily="@font/aladin"
+        android:hint="@string/email"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aladin"
+        android:hint="@string/password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:inputType="textWebPassword"
+        android:paddingLeft="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login Now"
         app:cornerRadius="@dimen/_7sdp"
         android:textColor="@color/white"
         android:elevation="@dimen/_15ssp"
         android:layout_marginHorizontal="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_25sdp"
         android:backgroundTint="#123654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pass"
         />
 
-    <Button
-        android:id="@+id/regis"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R E G E S T E R"
-        app:cornerRadius="@dimen/_7sdp"
-        android:textColor="@color/black"
-        android:layout_marginHorizontal="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        app:strokeWidth="1.50dp"
-        app:strokeColor="#ECC7C6"
+        android:fontFamily="@font/arizonia"
+        android:text="@string/or"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginbtn"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/gmail_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+
+    <TextView
+        android:id="@+id/contlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Google"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        app:layout_constraintStart_toEndOf="@id/image"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
         />
 
 
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/forgetpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password?"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/contlogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/_52sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+    <TextView
+        android:id="@+id/No_Acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have account?"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/forgetpass"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_48sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+    <TextView
+        android:id="@+id/reg_Acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have account?"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/forgetpass"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_48sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textColor="#0B2F4D"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/reg_Acc"
+        app:layout_constraintTop_toBottomOf="@id/forgetpass"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

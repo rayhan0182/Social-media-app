@@ -17,21 +17,8 @@ class StarterFragment : BaseFragment<FragmentStarterBinding>(
 ) {
     override fun usercreate() {
 
-        with(binding){
 
-            login.setOnClickListener {
 
-                findNavController().navigate(R.id.action_starterFragment_to_loginFragment)
-
-            }
-
-            regis.setOnClickListener {
-
-                findNavController().navigate(R.id.action_starterFragment_to_registerFragment)
-
-            }
-
-        }
 
     }
 
